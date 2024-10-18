@@ -1,0 +1,67 @@
+$color_: #F6F6F6;
+$taille_btn_fontionnement: 20%;
+$taille_haut_de_page: 3%;
+$color_bouton: -webkit-linear-gradient(160deg, rgba(255,121,218,1) 1%, rgba(147,86,220,1) 84%);
+$info_menu: margin-left 15%;
+$color_2: #98e2cf;
+$font_titre: Shrikhand;
+$font_text: Roboto;
+@keyframes menu_defile {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes menu_retrecie {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 25%;
+        opacity: 1;
+        animation-play-state: paused;
+    }
+}
+
+@keyframes coeur {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 10;
+        background-color: $color_bouton;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(100deg);
+    }
+    to {
+        transition: 2s 3s;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes page_loader {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes rotate_loader {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

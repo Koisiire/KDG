@@ -1,0 +1,406 @@
+/* index.html */
+@import "base";
+@import "_menupage";
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chargement_loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: grey;
+    animation: page_loader 4s;
+    font-size: 4rem;
+    visibility: hidden;
+    margin: auto;
+}
+.loader {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.loader_page {
+    border-radius: 50px;
+    border: 6px solid rgba(255,255,255,0.4);
+}
+.loader_page:after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border-radius: 50px;
+    border: 6px solid transparent;
+    border-top-color: green;
+    animation: rotate_loader 1s linear infinite;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: $font_text;
+}
+
+#head {
+    height: 100px;
+    box-shadow: 5px 6px 7px 2px #722525;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.research_ville {
+    display: flex;
+    align-items: center;
+    background-color: #EAEAEA;
+    height: 63px;
+    box-shadow: 5px 5px 15px #cecece inset;
+}
+
+.fa-map-marker-alt{
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+.btn_search {
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+.reservaton {
+    height: 290px;
+    background-color: $color_;
+}
+
+
+.titre_reservation {
+    padding-top: 55px;
+    margin: 0px 0px;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: $font_text;
+}
+
+.info_reservation {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: $font_text;
+}
+
+.btn_reservation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: $color_bouton;
+    width: 220px;
+    border-radius: 35px;
+    padding: 1em;
+    margin: auto;
+    color: white;
+}
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20%;
+    width: 370px;
+    margin: auto;
+}
+
+.indentity_fonction {
+    font-family: $font_text;
+}
+
+.btn {
+    display: flex;
+    color: $color_bouton;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: $color_;
+    width: 326px;
+    height: 75px;
+    border-radius: 20px;
+}
+
+.btn_numero {
+    background-color: #9356DB;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    padding: 4px 8px ;
+    font-size: 14px;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #F5EDFF;
+    cursor: pointer;
+}
+
+.numero {
+    font-size: 0.8rem;
+}
+
+.btn_fonction {
+    margin-left: 23px;
+}
+
+.btn_fonction {
+    margin-left: 20px;
+}
+
+.tout_restaurant {
+    background-color: $color_;
+}
+
+.conteneur_restaurant {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.proposotion_restaurant {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin: auto;
+    font-family: $font_text;
+}
+
+.nouveau {
+    position: absolute;
+    margin-left: 235px;
+    margin-top: 15px;
+    background-color: #99E2D0;
+    width: 70px;
+    color: #008766;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 7px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.restaurant {
+    width: 337px;
+    height: 250px;
+    margin-top: 17px;
+    margin-left: 19px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.img_restaurant {
+    width: 337px;
+    height: 174px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.name_restaurant {
+    line-height: 0.12rem;
+    margin-left: 30%;
+}
+
+.info_restaurant {
+    line-height: 0.17rem;
+    margin-left: 30%;
+    font-family: $font_text;
+}
+
+.btn_restaurant {
+    text-decoration: none;
+}
+.coeur {
+    margin-left: auto;
+    position: relative;
+    right: 20px;
+    top: 10px;
+}
+
+.titre_plat {
+    display: flex;
+}
+
+i.far.fa-heart {
+    background-color: white;
+}
+.fa-heart {
+    font-size: 1.2rem;
+    position: absolute;
+    font-weight: bold;
+    cursor: pointer;
+    right: 0;
+}
+.coeur:hover .fa-heart {
+    animation: coeur 2s;
+    cursor: pointer;
+    background-clip: text;
+    color: transparent;
+    background-color: #9900FF;
+    -webkit-background-color: $color_bouton; /**#FF80DA  #9356DC -webkit-linear-gradient(160deg, rgba(255,121,218,1) 1%, rgba(147,86,220,1) 84%)**/
+}
+.fa-heart::before:hover {
+    content: 'fa fa-heart';
+    background-color: #008766;
+}
+
+.fin_page {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+}
+
+.info_page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+.titre_footer {
+    color: rgb(119, 65, 65);
+    margin-left: 10px;
+    font-family: Shrikhand;
+}
+
+.info_site {
+    color: white;
+    font-family: $font_text;
+}
+/* mobile index.html */
+@media screen and (max-width: 376px) {
+    body {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .fa-map-marker-alt {
+        margin: auto;
+    }
+    
+    .btn_reservation {
+        margin: auto;
+    }
+
+    #head {
+        width: 100%;
+        height: $taille_haut_de_page;
+        margin: auto;
+        }
+
+        .research_ville {
+            width: 100%;
+            background-color: $color_;
+        }
+
+        .proposotion_restaurant {
+            margin-left: 8%;
+            padding-top: 50px;
+        }
+
+        .proposotion_restaurant {
+            display: block;
+        }
+
+        .conteneur_restaurant {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .restaurant
+        {
+            width: 337px;
+            height: 250px;
+            margin-top: 17px;
+            margin-left: 25px;
+        }
+
+        .nouveau {
+            position: absolute;
+            right: 35px;
+            margin-top: 15px;
+            background-color: #99E2D0;
+            width: 70px;
+            color: #008766;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 7px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .img_restaurant {
+            width: 337px;
+            height: 174px;
+        }
+
+        .name_restaurant {
+            line-height: 0.12rem;
+            margin-left: 3%;
+        }
+
+        .info_restaurant {
+            line-height: 0.17rem;
+            margin-left: 3%;
+        }
+
+        .fa-heart {
+            background-color: white;
+            right: 35px;
+            font-size: 1.2rem;
+            right: 10%;
+            position: absolute;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .info_page {
+            margin: 0px;
+        }
+
+        .logo_footer {
+            margin-left: 5%;
+            width: 7rem;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .fin_page {
+            display: flex;
+            flex-direction: column;
+            height: 210px;
+            margin-left: 5%;
+        }
+
+        .info_site {
+            margin-left: 3%;
+        }
+
+}

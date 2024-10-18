@@ -1,0 +1,255 @@
+@import "base";
+/* menu.html */
+html {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.a_la_française {
+    display: flex;
+    flex-direction: row;
+    background-color: $color_;
+    height: 63px;
+    width: 100%;
+    align-items: center;
+}
+
+.fa-arrow-left {
+    font-size: 1.1rem;
+    position: absolute;
+    top: 15px;
+    margin-left: 19px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteneur_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img_menu {
+    width: 25px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tout_menu {
+    background-color: $color_;
+}
+/* menu2.htm */
+.tout_menu_2 {
+    background-color: $color_;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* fin menu 2 */
+.conteneur {
+    display: flex;
+    overflow: hidden;
+    background: white;
+    box-shadow: 1px 1px #cecece;
+    border-radius: 15px;
+    min-width: 320px;
+    margin: 10px;
+}
+
+.overlay {
+    overflow: hidden;
+    width: 0;
+    display: flex;
+    background: #98E2CF;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.conteneur:hover .overlay {
+    cursor: pointer;
+    animation: menu_retrecie 1s;
+    animation-fill-mode: forwards;
+}
+
+.fa-check-circle {
+    display: flex;
+    justify-content: center;
+    background-color: #98E2CF;
+    transition: 1s;
+}
+.conteneur:hover .fa-check-circle {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+.menu_choix {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: -40px;
+    margin-bottom: -15px;
+    background-color: #F6F6F6;
+}
+
+.titre_menu {
+    font-family: $font_titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto
+}
+
+.coeur1 {
+    position: relative;
+    right: 80px;
+    top: -50px;
+    margin-left: 10px;
+}
+.coeur1:hover .fa-heart {
+    animation: coeur 2s;
+    cursor: pointer;
+    background-clip: text;
+    color: transparent;
+    background-color: #9900FF;
+    -webkit-background-color: $color_bouton; /**#FF80DA  #9356DC -webkit-linear-gradient(160deg, rgba(255,121,218,1) 1%, rgba(147,86,220,1) 84%)**/
+}
+.fa-heart {
+    transition: coeur;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.head {
+    margin-left: 15px;
+    border-bottom: 2px solid $color_2;
+    width: 38px;
+    font-family: $font_text;
+}
+
+.choix_menu {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    box-shadow: 1px 1px #CECECE;
+}
+
+.annimation1 {
+    animation: menu_defile 2s;
+}
+
+.annimation2 {
+    animation: menu_defile 3s;
+}
+
+.annimation3 {
+    animation: menu_defile 4s;
+}
+
+.annimation4 {
+    animation: menu_defile 5s;
+}
+
+.composition_menu {
+    font-size: 0.965rem;
+    font-family: $font_text;
+    margin: 0;
+}
+.conteneur:hover .composition_menu {
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info_menu {
+    font-size: 0.965rem;
+    line-height: 0.8rem;
+    margin: 0;
+    font-family: $font_text;
+}
+.conteneur:hover .info_menu {
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price_menu {
+    margin-left: auto;
+}
+
+.btn_commande {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: $color_bouton;
+    width: 185px;
+    height: 51px;
+    border-radius: 35px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.btn_commander {
+    color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+}
+
+.info_site {
+    color: white;
+}
+
+@media screen and (max-width: 376px) {
+    .tout_menu {
+        background-color: $color_;
+    }
+
+    .coeur1 {
+        right: auto;
+    }
+
+    .conteneur:hover .info_menu {
+        width: 210px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .price_menu {
+        right: 45px;
+        position: absolute;
+    }
+
+    .conteneur:hover .price_menu {
+        right: 100px;
+        position: absolute;
+    }
+
+    .btn_commande {
+        display: flex;
+        align-items: center;
+        background: $color_bouton;
+        width: 185px;
+        height: 51px;
+        border-radius: 35px;
+        margin-left: 25%;
+        margin-top: 60px;
+        color: white;
+    }
+    
+}

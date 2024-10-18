@@ -1,0 +1,881 @@
+@charset "UTF-8";
+/* index.html */
+@-webkit-keyframes menu_defile {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes menu_defile {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes menu_retrecie {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 25%;
+    opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+@keyframes menu_retrecie {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 25%;
+    opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+@-webkit-keyframes coeur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+    background-color: -webkit-linear-gradient(160deg, #ff79da 1%, #9356dc 84%);
+  }
+}
+@keyframes coeur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+    background-color: -webkit-linear-gradient(160deg, #ff79da 1%, #9356dc 84%);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(100deg);
+  }
+  to {
+    transition: 2s 3s;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(100deg);
+  }
+  to {
+    transition: 2s 3s;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes page_loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes page_loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes rotate_loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate_loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes menu_defile {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes menu_retrecie {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 25%;
+    opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+@keyframes coeur1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+    background-color: -webkit-linear-gradient(160deg, #ff79da 1%, #9356dc 84%);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(100deg);
+  }
+  to {
+    transition: 2s 3s;
+    transform: rotate(360deg);
+  }
+}
+@keyframes page_loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes rotate_loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* menu.html */
+html {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #949494;
+}
+
+.jeu_titre {
+  display: flex;
+  flex-direction: row;
+  background-color: #F6F6F6;
+  height: 63px;
+  width: 100%;
+  align-items: center;
+}
+
+.fa-arrow-left {
+  font-size: 1.1rem;
+  position: absolute;
+  top: 15px;
+  margin-left: 19px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteneur_jeu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.img_jeux {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tout_menu {
+  background-color: #F6F6F6;
+}
+
+/* jeux.htm */
+.telecharger_jeu {
+  background-color: #afafaf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+ 
+/* fin menu 2 */
+.conteneur {
+  display: flex;
+  overflow: hidden;
+  background: white;
+  box-shadow: 1px 1px #cecece;
+  border-radius: 15px;
+  min-width: 320px;
+  margin: 10px;
+}
+
+.overlay {
+  overflow: hidden;
+  width: 0;
+  display: flex;
+  background: #98E2CF;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.conteneur:hover .overlay {
+  cursor: pointer;
+  -webkit-animation: menu_retrecie 1s;
+          animation: menu_retrecie 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fa-check-circle {
+  display: flex;
+  justify-content: center;
+  background-color: #98E2CF;
+  transition: 1s;
+}
+
+.conteneur:hover .fa-check-circle {
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+
+.jeu_choix {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -40px;
+  margin-bottom: -15px;
+  background-color: #F6F6F6;
+}
+
+.titre_jeu {
+  font-family: Shrikhand;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  background-color: #afafaf;
+}
+
+.coeur1 {
+  position: relative;
+  right: 80px;
+  top: -50px;
+  margin-left: 10px;
+}
+
+.coeur1:hover .fa-heart {
+  -webkit-animation: coeur 2s;
+          animation: coeur 2s;
+  cursor: pointer;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-color: #9900FF;
+  -webkit-background-color: -webkit-linear-gradient(160deg, #ff79da 1%, #9356dc 84%);
+  /**#FF80DA  #9356DC -webkit-linear-gradient(160deg, rgba(255,121,218,1) 1%, rgba(147,86,220,1) 84%)**/
+}
+
+.fa-heart {
+  transition: coeur;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.telecharger {
+  margin-left: 15px;
+  border-bottom: 2px solid #4d6d3a;
+  color: #000000;
+  width: 38px;
+  font-family: Roboto;
+}
+
+.choix_jeu {
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+  box-shadow: 1px 1px #CECECE;
+  background-color: rgb(75, 100, 69);
+}
+
+.annimation1 {
+  -webkit-animation: menu_defile 2s;
+          animation: menu_defile 2s;
+}
+
+.annimation2 {
+  -webkit-animation: menu_defile 3s;
+          animation: menu_defile 3s;
+}
+
+.annimation3 {
+  -webkit-animation: menu_defile 4s;
+          animation: menu_defile 4s;
+}
+
+.annimation4 {
+  -webkit-animation: menu_defile 5s;
+          animation: menu_defile 5s;
+}
+
+.composition_jeu {
+  font-size: 0.965rem;
+  font-family: Roboto;
+  align-items: center;
+}
+
+.conteneur:hover .composition_jeu {
+  width: 230px;
+  margin-left: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.createur_jeu {
+  font-size: 0.965rem;
+  line-height: 0.8rem;
+  margin: 0;
+  font-family: Roboto;
+  margin-left: 27%;
+}
+
+.conteneur:hover .createur_jeu {
+  width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price_menu {
+  margin-left: auto;
+}
+
+.btn_commande {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: -webkit-linear-gradient(160deg, #ff79da 1%, #9356dc 84%);
+  width: 185px;
+  height: 51px;
+  border-radius: 35px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.btn_commander {
+  color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+}
+
+.info_site {
+  color: white;
+}
+
+@media screen and (max-width: 376px) {
+  .tout_menu {
+    background-color: #F6F6F6;
+  }
+
+  .coeur1 {
+    right: auto;
+  }
+
+  .conteneur:hover .info_menu {
+    width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .price_menu {
+    right: 45px;
+    position: absolute;
+  }
+
+  .conteneur:hover .price_menu {
+    right: 100px;
+    position: absolute;
+  }
+
+  .btn_commande {
+    display: flex;
+    align-items: center;
+    background: -webkit-linear-gradient(160deg, #ff79da 1%, #9356dc 84%);
+    width: 185px;
+    height: 51px;
+    border-radius: 35px;
+    margin-left: 25%;
+    margin-top: 60px;
+    color: white;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chargement_loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: grey;
+  -webkit-animation: page_loader 4s;
+          animation: page_loader 4s;
+  font-size: 4rem;
+  visibility: hidden;
+  margin: auto;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.loader_page {
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+}
+
+.loader_page:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: green;
+  -webkit-animation: rotate_loader 1s linear infinite;
+          animation: rotate_loader 1s linear infinite;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: Roboto;
+}
+
+#head {
+  height: 100px;
+  box-shadow: 5px 6px 7px 2px #CECECE;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.research_ville {
+  display: flex;
+  align-items: center;
+  background-color: #7c7c7c;
+  height: 63px;
+  box-shadow: 5px 5px 15px #cecece inset;
+}
+
+.fa-map-marker-alt {
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+.btn_search {
+  font-size: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.reservaton {
+  height: 290px;
+  background-color: #949494;
+}
+
+.titre_reservation {
+  padding-top: 55px;
+  margin: 0px 0px;
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: Roboto;
+}
+
+.info_reservation {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: Roboto;
+}
+
+.btn_reservation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #c3d5ab;
+  width: 220px;
+  border-radius: 35px;
+  padding: 1em;
+  margin: auto;
+  color: rgb(124, 136, 109);
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20%;
+  width: 370px;
+  margin: auto;
+}
+
+.indentity_fonction {
+  font-family: Roboto;
+}
+
+.btn {
+  display: flex;
+  color: #62665d;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: #F6F6F6;
+  width: 326px;
+  height: 75px;
+  border-radius: 20px;
+}
+
+.btn_numero {
+  background-color: #8cad60;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #c3d5ab;
+  cursor: pointer;
+}
+
+.numero {
+  font-size: 0.8rem;
+}
+
+.btn_fonction {
+  margin-left: 23px;
+}
+
+.btn_fonction {
+  margin-left: 20px;
+}
+
+.btn_discord{
+  background-color: #687554;
+}
+
+.btn_youtube {
+  background-color: #687554;
+}
+
+.btn_twitch {
+  background-color: #687554;
+}
+
+.tout_jeux {
+  background-color: #afafaf;
+}
+
+.conteneur_jeu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  background-color: #afafaf;
+}
+
+.proposotion_jeu {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-family: Roboto;
+  align-items: center;
+}
+
+.nouveau {
+  position: absolute;
+  margin-left: 235px;
+  margin-top: 15px;
+  background-color: #99E2D0;
+  width: 70px;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 7px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.jeu {
+  width: 337px;
+  height: 250px;
+  margin-top: 17px;
+  margin-left: 19px;
+  background-color: rgb(75, 100, 69);
+  border-radius: 20px;
+}
+
+.img_jeux {
+  width: 337px;
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.nom_jeux {
+  line-height: 0.12rem;
+  margin-left: 30%;
+}
+
+.info_jeux {
+  line-height: 0.17rem;
+  margin-left: 30%;
+  font-family: Roboto;
+}
+
+.btn_restaurant {
+  text-decoration: none;
+}
+
+.coeur {
+  margin-left: auto;
+  position: relative;
+  right: 20px;
+  top: 10px;
+}
+
+.titre_plat {
+  display: flex;
+  align-items: center;
+}
+
+i.far.fa-heart {
+  background-color: white;
+}
+
+.fa-heart {
+  font-size: 1.2rem;
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
+  right: 0;
+}
+
+.coeur:hover .fa-heart {
+  -webkit-animation: coeur 2s;
+          animation: coeur 2s;
+  cursor: pointer;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-color: #9900FF;
+  -webkit-background-color: -webkit-linear-gradient(160deg, #ff79da 1%, #9356dc 84%);
+  /**#FF80DA  #9356DC -webkit-linear-gradient(160deg, rgba(255,121,218,1) 1%, rgba(147,86,220,1) 84%)**/
+}
+
+.fa-heart::before:hover {
+  content: "fa fa-heart";
+  background-color: #008766;
+}
+
+.fin_page {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+}
+
+.info_page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+}
+
+.titre_footer {
+  color: white;
+  margin-left: 10px;
+  font-family: Shrikhand;
+}
+
+.info_site {
+  color: white;
+  font-family: Roboto;
+}
+
+/*page jeu*/
+.img_page_jeu {
+  width: 100%;
+}
+/* mobile index.html */
+@media screen and (max-width: 376px) {
+  body {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .fa-map-marker-alt {
+    margin: auto;
+  }
+
+  .btn_reservation {
+    margin: auto;
+  }
+
+  #telecharger {
+    width: 100%;
+    height: 3%;
+    margin: auto;
+  }
+
+  .research_ville {
+    width: 100%;
+    background-color: #a09f9f;
+  }
+
+  .proposotion_restaurant {
+    margin-left: 8%;
+    padding-top: 50px;
+  }
+
+  .proposotion_restaurant {
+    display: block;
+  }
+
+  .conteneur_restaurant {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page_jeu {
+    width: 337px;
+    height: 250px;
+    margin-top: 17px;
+    margin-left: 25px;
+  }
+
+  .nouveau {
+    position: absolute;
+    right: 35px;
+    margin-top: 15px;
+    background-color: #99E2D0;
+    width: 70px;
+    color: #008766;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 7px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .img_restaurant {
+    width: 337px;
+    height: 174px;
+  }
+
+  .name_restaurant {
+    line-height: 0.12rem;
+    margin-left: 30%;
+  }
+
+  .info_restaurant {
+    line-height: 0.17rem;
+    margin-left: 3%;
+  }
+
+  .fa-heart {
+    background-color: white;
+    right: 35px;
+    font-size: 1.2rem;
+    right: 10%;
+    position: absolute;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .info_page {
+    margin: 0px;
+  }
+
+  .logo_footer {
+    margin-left: 5%;
+    width: 7rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: white;
+  }
+
+  .fin_page {
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+    margin-left: 5%;
+  }
+
+  .info_site {
+    margin-left: 3%;
+  }
+}/*# sourceMappingURL=style.css.map */
